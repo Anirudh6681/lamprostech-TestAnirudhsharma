@@ -1,0 +1,19 @@
+import java.io.*;
+
+class singleint
+{
+static int search(int []arr, int n)  //a search function has been created with an array and no of elements of array
+{
+   int n = 0;                  // intialised the integer n with 0, to avoid getting any garbage value 
+   for (int i = 0; i < n; i++)         // a for-loop is running untill value of i is less than the total no. of elements present in array 
+     n =  n ^ arr[i];         // here we are using XOR operation, as XOR has a feature that it gives out true when checked with different element, so we will check XOR with 0, which will yield the single integer
+    return n;
+}
+ 
+static public void main (String[] args)  
+{
+int []arr = {3,3,5,6,5,8,9,9};
+int n = arr.length;
+System.out.println(search(arr, n));
+}
+}
